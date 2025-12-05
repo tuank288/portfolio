@@ -10,27 +10,14 @@ const ParallaxBackground = () => {
       <div className="relative h-screen overflow-y-hidden">
         {/* Background Sky */}
         <div
-          className="absolute inset-0 w-full h-screen -z-50"
-          style={{
-            backgroundImage: "url(/assets/images/galaxy.png)",
-            backgroundPosition: "right",
-            backgroundSize: "cover",
-            filter: "brightness(2)",
-
-          }}
+          className="absolute inset-0 w-full h-screen -z-50 bg-galaxy"
         />
         {/* Mountaine Layer 1 */}
         <motion.div
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 bg-meteorite"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          style={{
-            backgroundImage: "url(/assets/images/meteorite.png)",
-            backgroundPosition: "bottom",
-            backgroundSize: "contain",
-            backgroundRepeat: "repeat-x",
-            y: meteoriteY,
-          }}
+          style={{ y: meteoriteY }}
         />
         <div className="glow"></div>
       </div>

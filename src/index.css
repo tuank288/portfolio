@@ -164,6 +164,19 @@ body {
   @apply sm:px-10 px-5 lg:px-15;
 }
 
+.bg-galaxy {
+  background-image: url("/assets/images/galaxy.webp");
+  background-size: cover;
+  background-position: right;
+  filter: brightness(2);
+}
+.bg-meteorite {
+  background-image: url("/assets/images/meteorite.webp");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
 /* Custom scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   @apply w-1.5 h-1.5;
