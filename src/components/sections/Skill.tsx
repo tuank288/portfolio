@@ -2,7 +2,8 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
     SiJavascript, SiReact, SiAngular, SiTailwindcss, SiTypescript, SiFigma, SiMysql, SiGithub, SiNodedotjs, SiPrisma, SiNestjs,
-    SiGraphql
+    SiGraphql,
+    SiPostgresql
 } from "react-icons/si";
 import { Particles } from "../ui/particles";
 
@@ -25,6 +26,7 @@ const Skill = () => {
         { name: "Prisma", icon: SiPrisma },
         { name: "NestJs", icon: SiNestjs },
         { name: "GraphQL", icon: SiGraphql },
+        { name: "PostgreSQL", icon: SiPostgresql },
     ];
 
     const cssVar = (vars: Record<string, string | number>) => vars as React.CSSProperties;
