@@ -6,6 +6,7 @@ interface ProjectDetailsProps {
   description: string;
   subDescription?: string[];
   image: string;
+  isOpen: boolean;
   tags: {
     id: number;
     name: string;
@@ -22,10 +23,17 @@ const ProjectDetails = ({
   subDescription,
   image,
   tags,
+  isOpen,
   closeModal,
 }: ProjectDetailsProps) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+    <div
+      className={`
+        fixed inset-0 z-50 flex items-center justify-center
+        w-full h-full backdrop-blur-sm transition-all duration-300
+        ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+      `}
+    >
       <motion.div
         className="relative max-w-2xl shadow-sm bg-linear-to-l from-midnight to-navy"
         initial={{ opacity: 0, scale: 0.5 }}

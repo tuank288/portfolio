@@ -27,14 +27,11 @@ const Project = ({
   tags,
   setPreview,
 }: ProjectProps) => {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
-    if (isHidden) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isHidden]);
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
   return (
     <>
       <div
@@ -51,7 +48,7 @@ const Project = ({
           </div>
         </div>
         <button
-          onClick={() => setIsHidden(true)}
+          onClick={() => setIsOpen(true)}
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
@@ -59,17 +56,16 @@ const Project = ({
         </button>
       </div>
       <div className="bg-linear-to-r from-transparent via-neutral-700 to-transparent h-px w-full" />
-      {isHidden && (
-        <ProjectDetails
-          title={title}
-          description={description}
-          subDescription={subDescription}
-          image={image}
-          tags={tags}
-          href={href}
-          closeModal={() => setIsHidden(false)}
-        />
-      )}
+      <ProjectDetails
+        title={title}
+        description={description}
+        subDescription={subDescription}
+        image={image}
+        tags={tags}
+        href={href}
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+      />
     </>
   );
 };
