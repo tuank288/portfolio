@@ -7,11 +7,11 @@ const HeroText = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="z-10 mt-20 md:mt-62 md:text-left rounded-3xl bg-clip-text w-7xl mx-auto">
+    <div className="z-10 mt-[20vh] md:text-left rounded-3xl bg-clip-text w-7xl mx-auto">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex">
         <motion.h1
-          className="text-6xl font-mono font-extrabold text-neutral-300"
+          className="text-[clamp(1rem,5vw,3.75rem)] font-mono font-extrabold text-neutral-300"
           variants={variants}
           initial="hidden"
           animate="visible"

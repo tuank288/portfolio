@@ -7,7 +7,9 @@ import { useMediaQuery } from "react-responsive";
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({
+    query: "(pointer: coarse) or (max-width: 768px)"
+  });
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);

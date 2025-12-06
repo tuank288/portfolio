@@ -56,7 +56,7 @@ const Contact = React.memo(() => {
     }, []);
 
     return (
-        <section id="contact" ref={ref} className="py-20 px-4 overflow-x-hidden">
+        <section id="contact" ref={ref} className="py-20 px-4 overflow-x-hidden c-space">
             <div className="max-w-4xl mx-auto">
                 {showAlert && <Alert type={status} text={alertMessage} />}
                 <motion.div

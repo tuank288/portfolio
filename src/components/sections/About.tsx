@@ -9,7 +9,7 @@ const About = React.memo(() => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
     return (
         <section id="about" ref={ref}>
-            <div className="max-w-7xl mx-auto pt-20 c-space">
+            <div className="max-w-7xl mx-auto pt-20 c-space overflow-hidden">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
