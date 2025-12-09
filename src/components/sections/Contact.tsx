@@ -82,7 +82,7 @@ const Contact = React.memo(() => {
                         {[
                             { icon: Mail, text: 'tuank2882001@gmail.com', href: 'mailto:tuank2882001@gmail.com' },
                             { icon: Github, text: 'github.com/tuank288', href: 'https://github.com/tuank288' },
-                            { icon: Linkedin, text: 'linkedin.com/in/tuank288', href: 'https://linkedin.com' },
+                            { icon: Linkedin, text: 'linkedin.com/in/tuank', href: 'https://www.linkedin.com/in/tu%C3%A2n-k-94763b384' },
                         ].map((item, i) => (
                             <motion.a
                                 key={i}
